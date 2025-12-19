@@ -25,7 +25,7 @@ Book Now
                             <li class="text-muted">❌ Personalized Support</li>
                         </ul>
                         <div class="d-grid">
-                            <a href="#" class="btn btn-outline-primary rounded-pill py-2">Get Started</a>
+                            <a href="{% url 'payment_form' %}?plan=Basic" class="btn btn-outline-primary rounded-pill py-2">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ Book Now
                             <li class="text-muted">❌ Personalized Daily Calls</li>
                         </ul>
                         <div class="d-grid">
-                            <a href="#" class="btn btn-primary rounded-pill py-2 shadow-sm">Choose Premium</a>
+                            <a href="{% url 'payment_form' %}?plan=Premium" class="btn btn-primary rounded-pill py-2 shadow-sm">Choose Premium</a>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ Book Now
                             <li class="mb-2">✅ Priority Booking</li>
                         </ul>
                         <div class="d-grid">
-                            <a href="#" class="btn btn-outline-dark rounded-pill py-2">Go Elite</a>
+                            <a href="{% url 'payment_form' %}?plan=Elite" class="btn btn-outline-dark rounded-pill py-2">Go Elite</a>
                         </div>
                     </div>
                 </div>

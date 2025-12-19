@@ -1,0 +1,83 @@
+{% extends "main.html" %}
+
+{% block title %}Payment{% endblock title %}
+
+{% block body %}
+<div class="container my-5">
+    <h1 class="text-center mb-4 fw-bold display-4">Checkout</h1>
+    
+    {% if selected_plan %}
+        <p class="text-center text-muted mb-5 lead">
+            You have selected the <strong>{{ selected_plan }}</strong> plan.
+        </p>
+    {% endif %}
+
+    <div class="row justify-content-center g-4">
+        <!-- Payment Form -->
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-body p-5">
+                    <h5 class="card-title fw-bold text-center mb-4">Payment Information</h5>
+                    
+                    <form method="post" action="{% url 'payment_form' %}">
+                        {% csrf_token %}
+
+                        {% if success %}
+                            <div class="alert alert-success">
+                                Payment submitted for <strong>{{ selected_plan }}</strong> plan.
+                                {% if customer_name %} Thank you, {{ customer_name }}. {% endif %}
+                            </div>
+                        {% endif %}
+
+                        <!-- Hidden field to pass the selected plan -->
+                        <input type="hidden" name="plan" value="{{ selected_plan }}">
+
+                        <!-- Name on Card Field -->
+                        <div class="mb-3">
+                            <label for="cardName" class="form-label">Name on Card</label>
+                            <input type="text" name="name" class="form-control" id="cardName" placeholder="John Doe" required>
+                        </div>
+
+                        <!-- Card Number Field -->
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <input type="text" name="card_number" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+
+                        <!-- Phone Number Field -->
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <input type="tel" name="phone" class="form-control" id="phoneNumber" placeholder="(123) 456-7890" required>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+                        
+                        <div class="row g-3 mb-4">
+                            <!-- Expiry Date Field -->
+                            <div class="col-md-6">
+                                <label for="expiryDate" class="form-label">Expiry Date</label>
+                                <input type="text" name="expiry" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                            </div>
+
+                            <!-- CVV Field -->
+                            <div class="col-md-6">
+                                <label for="cvv" class="form-label">CVV</label>
+                                <input type="text" name="cvv" class="form-control" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+
+                        <!-- Submit Payment Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary rounded-pill py-2 fw-bold">Submit Payment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

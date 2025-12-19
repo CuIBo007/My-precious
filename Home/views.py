@@ -1,4 +1,6 @@
 from django.shortcuts import render, HttpResponse
+from datetime import datetime
+from Home.models import payment_form as PaymentModel
 
 # Create your views here.
 def index(request):
@@ -30,4 +32,32 @@ def payment_Plans(request):
     return render(request, 'payment_Plans.html')
 
 def payment_form(request):
-    return render(request, 'payment_form.html')
+    if request.method == 'POST':
+        # read submitted form data
+        plan = request.POST.get('plan', '')
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        cardnumber = request.POST.get('cardnumber', '')
+        phone = request.POST.get('phone', '')
+        expdate = request.POST.get('expdate', '')
+        cvv = request.POST.get('cvv', '')
+        date = request.POST.get('date', '')
+
+        record = PaymentModel(
+            plan=plan,
+            name=name,
+            cardnumber=cardnumber,
+            phone=phone,
+            email=email,
+            expdate=expdate,
+            cvv=cvv,
+            date=datetime.today()
+        )
+        record.save()
+        context = {'selected_plan': plan, 'success': True, 'customer_name': name}
+        return render(request, 'payment_form.html', context)
+
+    # GET: read plan from querystring (?plan=Basic)
+    plan = request.GET.get('plan', '')
+    context = {'selected_plan': plan}
+    return render(request, 'payment_form.html', context)
