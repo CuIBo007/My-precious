@@ -6,6 +6,78 @@ About Us
 {% endblock title %}
 
 {% block body%}
-this is the about page
+<div class="container my-5 px-3">
+    <div class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-primary">About Our Paws-itive Mission</h2>
+        <p class="lead text-muted">Dedicated to the happiness, health, and wagging tails of your furry family members.</p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Section 1: Retail/Quality -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm rounded-4 hover-shadow transition">
+                <div class="card-body text-center p-4">
+                    <div class="display-5 mb-3">Premium 🛍️</div>
+                    <h4 class="fw-bold mb-3" id="scrollspyHeading1">Quality & Love</h4>
+                    <p class="card-text text-secondary">
+                        Welcome to <strong>[Company Name]</strong>. Founded by pet parents, we curate only premium, safe, and durable products designed to enhance the lives of your companions. Because we believe a happy pet makes a happy home.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Services -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm rounded-4 bg-light">
+                <div class="card-body text-center p-4">
+                    <div class="display-5 mb-3">Reliable 🐕</div>
+                    <h4 class="fw-bold mb-3" id="scrollspyHeading2">Trust & Care</h4>
+                    <p class="card-text text-secondary">
+                        We treat your pets like family. With over <strong>[Number]</strong> years of experience, our certified professionals provide loving, tailored care—from energetic walks to cozy overnight stays.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Shelter/Rescue -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-body text-center p-4">
+                    <div class="display-5 mb-3">Heart ❤️</div>
+                    <h4 class="fw-bold mb-3" id="scrollspyHeading3">Mission</h4>
+                    <p class="card-text text-secondary">
+                        At <strong>[Shelter Name]</strong>, we believe every nose deserves a home. We rescue, rehabilitate, and rehome pets in need, providing medical care and unconditional love while they wait for you.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Blog/Community -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm rounded-4 bg-primary text-white">
+                <div class="card-body text-center p-4">
+                    <div class="display-5 mb-3">Expert 🐾</div>
+                    <h4 class="fw-bold mb-3" id="scrollspyHeading4">Community</h4>
+                    <p class="card-text">
+                        Your source for expert advice. From nutrition hacks to behavioral tips, <strong>[Blog Name]</strong> helps you strengthen the unique bond you share with your best friend.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Extra Interaction: Link to Resources -->
+    <div class="text-center mt-5">
+        <p class="text-muted">Looking for professional standards? Visit the <a href="www.petsit.com" class="text-primary text-decoration-none fw-bold">Pet Sitters International</a> directory.</p>
+    </div>
+</div>
+
+<style>
+    .transition { transition: all 0.3s ease-in-out; }
+    .hover-shadow:hover { transform: translateY(-10px); box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important; }
+    .card { border-radius: 20px; }
+</style>
+
+
 {% endblock body%}
 

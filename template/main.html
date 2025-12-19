@@ -11,42 +11,98 @@
     <title>   {% block title %} {% endblock title %}   </title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">My Precious</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   
+     <!-- Glassmorphism Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+  <div class="container">
+    <!-- Brand/Logo with Icon -->
+    <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-primary" href="/">
+      <span class="me-2">🐾</span> My Precious
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active px-3 fw-medium" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">About Us</a>
+          <a class="nav-link px-3 fw-medium" href="/about">About Us</a>
         </li>
+
+        <!-- Services Dropdown with Icons -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle px-3 fw-medium" href="#" id="servicesDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Services
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/service1">service1</a></li>
-            <li><a class="dropdown-item" href="/service2">service2</a></li>
-            <li><a class="dropdown-item" href="/service3">service3</a></li>
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg rounded-4 p-2 mt-2" aria-labelledby="servicesDrop">
+            <li><a class="dropdown-item rounded-3 py-2" href="/service1">🍎 Nutrition & Health</a></li>
+            <li><a class="dropdown-item rounded-3 py-2" href="/service2">✂️ Grooming</a></li>
+            <li><a class="dropdown-item rounded-3 py-2" href="/service3">🎓 Training</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">more services....</a></li>
+            <li><a class="dropdown-item rounded-3 py-2 text-muted" href="/services">View All Services</a></li>
           </ul>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a class="nav-link px-3 fw-medium" href="/contact">Contact</a>
         </li>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
+        <!-- Call to Action Button (Django Friendly) -->
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-primary rounded-pill px-4 shadow-sm fw-bold" href="/payment_Plans">Book Now</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
+
+<style>
+  /* 2025 Navbar Styling */
+  .navbar {
+    backdrop-filter: blur(10px); /* Modern blur effect */
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    transition: all 0.3s ease;
+  }
+
+  /* Nav link hover effects */
+  .nav-link {
+    color: #4b5563 !important; /* Soft dark gray */
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover, .nav-link.active {
+    color: #0d6efd !important; /* Brand Blue */
+  }
+
+  /* Dropdown styling */
+  .dropdown-menu {
+    min-width: 220px;
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f0f7ff;
+    color: #0d6efd;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Prevent Stretching: Navbar brand shouldn't grow */
+  .navbar-brand {
+    flex-shrink: 0;
+  }
+</style>
+ 
+  
 
 {% block body%}
 {% endblock body%}

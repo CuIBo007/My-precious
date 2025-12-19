@@ -6,6 +6,81 @@ Service1
 {% endblock title %}
 
 {% block body%}
-this is the service1 page
+<!-- Nutrition & Health Section -->
+<div class="container my-5 py-4">
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+            <h6 class="text-uppercase fw-bold text-success ls-wide">Science-Backed Wellness</h6>
+            <h2 class="display-5 fw-bold text-dark mb-4">Cornerstone of <span class="text-success">Vitality</span></h2>
+            <p class="lead text-secondary mb-4">
+                In 2025, nutrition is the foundation of longevity. We provide personalized plans focusing on whole ingredients and functional supplements.
+            </p>
+            <div class="d-flex flex-column gap-3">
+                <div class="d-flex align-items-start">
+                    <div class="icon-sm bg-success text-white rounded-circle me-3">🌿</div>
+                    <div>
+                        <h6 class="fw-bold mb-1">Single-Protein Solutions</h6>
+                        <p class="small text-muted mb-0">Targeted diets to manage sensitivities and digestive health.</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-start">
+                    <div class="icon-sm bg-success text-white rounded-circle me-3">🦴</div>
+                    <div>
+                        <h6 class="fw-bold mb-1">Functional Supplements</h6>
+                        <p class="small text-muted mb-0">Joint, gut, and immune support chews for every life stage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+            <div class="health-bowl-wrapper position-relative">
+                <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZyZXNoJTIwcGV0JTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" 
+                     class="img-fluid rounded-circle shadow-lg border border-5 border-white" alt="Fresh Pet Food">
+                <div class="floating-stat bg-white shadow p-3 rounded-4 position-absolute top-0 end-0">
+                    <h4 class="text-success fw-bold mb-0">95%</h4>
+                    <small class="text-muted fw-bold">Pure Protein</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wellness Tiers -->
+    <div class="row g-4 text-center">
+        <div class="col-md-4">
+            <div class="card border-0 bg-light p-4 h-100 rounded-5 transition-hover">
+                <div class="fs-1 mb-3">🍼</div>
+                <h5 class="fw-bold">Early Vitality</h5>
+                <p class="text-muted small">High-protein growth formulas for puppies and kittens.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 bg-light p-4 h-100 rounded-5 transition-hover border-top border-success border-3 shadow-sm">
+                <div class="fs-1 mb-3">⚖️</div>
+                <h5 class="fw-bold">Weight Management</h5>
+                <p class="text-muted small">Calorie-controlled recipes to maintain optimal body condition.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 bg-light p-4 h-100 rounded-5 transition-hover">
+                <div class="fs-1 mb-3">🕰️</div>
+                <h5 class="fw-bold">Senior Care</h5>
+                <p class="text-muted small">Brain health and joint support for aging companions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .ls-wide { letter-spacing: 2px; }
+    .text-success { color: #2ecc71 !important; }
+    .bg-success { background-color: #2ecc71 !important; }
+    .icon-sm { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+    .rounded-5 { border-radius: 2.5rem !important; }
+    .transition-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .transition-hover:hover { transform: translateY(-10px); background-color: #ffffff !important; box-shadow: 0 1rem 3rem rgba(0,0,0,0.1); }
+    .health-bowl-wrapper img { width: 400px; height: 400px; object-fit: cover; }
+    .floating-stat { transform: translate(20%, -20%); border: 1px solid rgba(0,0,0,0.05); }
+</style>
+
 {% endblock body%}
 

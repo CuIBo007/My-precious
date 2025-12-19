@@ -6,6 +6,129 @@ Service2
 {% endblock title %}
 
 {% block body%}
-this is the service2 page
+<!-- Grooming Section Wrapper -->
+<div class="overflow-hidden">
+    <!-- Hero/Intro for Grooming -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-2 text-center">
+                    <div class="position-relative d-inline-block">
+                        <!-- Modern organic shape background -->
+                        <div class="position-absolute top-50 start-50 translate-middle bg-warning opacity-10 rounded-circle" style="width: 110%; height: 110%;"></div>
+                        <img src="https://media.istockphoto.com/id/1188690247/photo/cute-red-and-white-corgi-lays-on-the-bed-with-eye-maks-from-real-cucumber-chips-head-on-the.webp?a=1&b=1&s=612x612&w=0&k=20&c=lbGXKNOCKKUig2m5LhbGYAFY5W6v8cT-j6Dy0TijDMA=" 
+                             class="img-fluid rounded-4 shadow-lg position-relative z-1" alt="Dog at the spa">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h6 class="text-warning fw-bold text-uppercase ls-2">The Ultimate Spa Day</h6>
+                    <h2 class="display-5 fw-bold mb-4">Grooming That <span class="text-warning">Glows</span></h2>
+                    <p class="lead text-muted mb-4">Our "Fear-Free" certified groomers provide a stress-free environment using premium organic shampoos and 2025's best ultrasonic cleaning technology.</p>
+                    
+                    <div class="row g-3 mb-4">
+                        <div class="col-6">
+                            <div class="p-3 border rounded-4 bg-light">
+                                <h4 class="fw-bold mb-0">15+</h4>
+                                <small class="text-muted">Spa Treatments</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 border rounded-4 bg-light">
+                                <h4 class="fw-bold mb-0">Certified</h4>
+                                <small class="text-muted">Master Groomers</small>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#booking" class="btn btn-warning btn-lg rounded-pill px-5 text-dark fw-bold shadow-sm">Reserve a Spot</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grooming Menu -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Grooming Menu</h2>
+                <p class="text-muted">Transparent pricing for every breed and size.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 hover-lift">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fs-2">🧼</span>
+                                <span class="badge bg-warning-soft text-warning rounded-pill">Basic</span>
+                            </div>
+                            <h4 class="fw-bold">Bath & Brush</h4>
+                            <p class="text-muted small">Deep cleansing wash, blow-dry, 15-min brush out, and ear cleaning.</p>
+                            <hr>
+                            <h5 class="fw-bold text-dark">$45+ <small class="text-muted fs-6">/ session</small></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-lg rounded-4 hover-lift border-top border-warning border-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fs-2">✂️</span>
+                                <span class="badge bg-warning text-dark rounded-pill">Popular</span>
+                            </div>
+                            <h4 class="fw-bold">Full Style Groom</h4>
+                            <p class="text-muted small">Includes everything in Basic plus breed-specific styling and sanitary trim.</p>
+                            <hr>
+                            <h5 class="fw-bold text-dark">$75+ <small class="text-muted fs-6">/ session</small></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 hover-lift">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fs-2">🦷</span>
+                                <span class="badge bg-warning-soft text-warning rounded-pill">Add-on</span>
+                            </div>
+                            <h4 class="fw-bold">The Luxury Extra</h4>
+                            <p class="text-muted small">Teeth brushing, nail grinding (dremel), and paw pad balm for extra care.</p>
+                            <hr>
+                            <h5 class="fw-bold text-dark">+$25 <small class="text-muted fs-6">to any package</small></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    /* Prevent horizontal stretching */
+    .overflow-hidden { overflow-x: hidden; }
+
+    /* Grooming Theme Colors */
+    .text-warning { color: #f39c12 !important; }
+    .bg-warning { background-color: #f39c12 !important; }
+    .bg-warning-soft { background-color: #fef5e7; }
+    .ls-2 { letter-spacing: 2px; }
+
+    /* Modern Card Effects */
+    .hover-lift {
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+    .hover-lift:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 1.5rem 4rem rgba(243, 156, 18, 0.15) !important;
+    }
+
+    .rounded-4 { border-radius: 1.5rem !important; }
+    
+    .z-1 { z-index: 1; }
+</style>
+
 {% endblock body%}
 

@@ -1,0 +1,102 @@
+{% extends "main.html" %}
+
+{% block title %}
+Book Now 
+{% endblock title %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1 class="text-center mb-4 fw-bold display-4">Simple, Transparent Plans</h1>
+        <p class="text-center text-muted mb-5 lead">Find the perfect package for your pet's needs. No hidden fees, just happy tails.</p>
+
+        <!-- Use the dedicated Pricing Component Instead of including individual service pages -->
+        <div class="row justify-content-center g-4">
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 pricing-card">
+                    <div class="card-body p-5">
+                        <h5 class="card-title fw-bold text-center">Basic Plan</h5>
+                        <p class="h1 fw-bold text-center my-4">$100<span class="text-muted fs-6 fw-normal">/month</span></p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">✅ Basic Training Access</li>
+                            <li class="mb-2">✅ Monthly Check-ins</li>
+                            <li class="mb-2">✅ Community Forum Access</li>
+                            <li class="text-muted">❌ Customized Plans</li>
+                            <li class="text-muted">❌ Personalized Support</li>
+                        </ul>
+                        <div class="d-grid">
+                            <a href="#" class="btn btn-outline-primary rounded-pill py-2">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Plan (Featured) -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg border-2 border-primary rounded-4 pricing-card featured-card">
+                    <div class="card-body p-5">
+                        <div class="badge bg-primary text-white position-absolute top-0 end-0 mt-3 me-3">Most Popular</div>
+                        <h5 class="card-title fw-bold text-center text-primary">Premium Plan</h5>
+                        <p class="h1 fw-bold text-center my-4">$200<span class="text-muted fs-6 fw-normal">/month</span></p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">✅ **Everything in Basic**</li>
+                            <li class="mb-2">✅ Weekly Check-ins</li>
+                            <li class="mb-2">✅ Customized Plans</li>
+                            <li class="mb-2">✅ 24/7 Email Support</li>
+                            <li class="text-muted">❌ Personalized Daily Calls</li>
+                        </ul>
+                        <div class="d-grid">
+                            <a href="#" class="btn btn-primary rounded-pill py-2 shadow-sm">Choose Premium</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elite Plan -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 pricing-card">
+                    <div class="card-body p-5">
+                        <h5 class="card-title fw-bold text-center">Elite Plan</h5>
+                        <p class="h1 fw-bold text-center my-4">$300<span class="text-muted fs-6 fw-normal">/month</span></p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">✅ **Everything in Premium**</li>
+                            <li class="mb-2">✅ Daily Check-ins (calls)</li>
+                            <li class="mb-2">✅ Personalized Support</li>
+                            <li class="mb-2">✅ On-site Visits (if applicable)</li>
+                            <li class="mb-2">✅ Priority Booking</li>
+                        </ul>
+                        <div class="d-grid">
+                            <a href="#" class="btn btn-outline-dark rounded-pill py-2">Go Elite</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How it works section -->
+        <div class="mt-5 pt-5 text-center">
+            <h3 class="fw-bold">Need something specific?</h3>
+            <p class="text-muted">Explore our individual, specialized services like Grooming or Nutrition planning.</p>
+            <a href="/services" class="btn btn-link text-decoration-none fw-bold text-primary">View All Services →</a>
+        </div>
+    </div>
+
+    <style>
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Highlight the featured card */
+        .featured-card {
+            box-shadow: 0 1rem 3rem rgba(0, 123, 255, 0.175) !important;
+        }
+        /* Custom checkmark styling */
+        .list-unstyled li {
+            position: relative;
+            padding-left: 25px;
+            line-height: 1.5;
+        }
+    </style>
+{% endblock body %}

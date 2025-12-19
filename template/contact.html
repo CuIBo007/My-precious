@@ -6,6 +6,78 @@ contact us
 {% endblock title %}
 
 {% block body%}
-this is the contact page
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold text-primary">Get In Touch 🐾</h2>
+        <p class="text-muted">Have a question? Our team is here to help you and your furry friends!</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Phone Card -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm text-center p-4 hover-lift transition-base">
+                <div class="rounded-circle bg-primary bg-opacity-10 d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                    <span class="fs-1">📞</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold mb-3">Call Us</h5>
+                    <p class="text-muted">We’re available Mon-Fri, 9am - 6pm for all your pet queries.</p>
+                    <a href="tel:+9800000000" class="btn btn-outline-primary rounded-pill px-4">98********</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Card -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm text-center p-4 hover-lift transition-base">
+                <div class="rounded-circle bg-success bg-opacity-10 d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                    <span class="fs-1">✉️</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold mb-3">Email Support</h5>
+                    <p class="text-muted">Send us a message anytime! We usually respond within 24 hours.</p>
+                    <a href="mailto:contact@company.com" class="btn btn-outline-success rounded-pill px-4">contact@company.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Address Card -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm text-center p-4 hover-lift transition-base">
+                <div class="rounded-circle bg-warning bg-opacity-10 d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                    <span class="fs-1">📍</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold mb-3">Visit Our Shop</h5>
+                    <p class="text-muted">123 Main Street, City, Country.<br>Come say hi to our office pets!</p>
+                    <a href="www.google.com" target="_blank" class="btn btn-outline-warning rounded-pill px-4">Open Maps</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* 2025 Modern Styling */
+    .transition-base { 
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+    }
+    
+    .hover-lift:hover { 
+        transform: translateY(-12px); 
+        box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
+        background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    }
+
+    .card {
+        border-radius: 24px; /* Softer, modern corners */
+    }
+
+    .btn-outline-primary, .btn-outline-success, .btn-outline-warning {
+        border-width: 2px;
+        font-weight: 600;
+    }
+</style>
+
 {% endblock body%}
 
