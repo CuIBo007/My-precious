@@ -1,4 +1,3 @@
-from multiprocessing import context #import context is done by me 
 from django.shortcuts import render, HttpResponse
 
 # Create your views here.
@@ -29,3 +28,6 @@ def service3(request):
 
 def payment_Plans(request):
     return render(request, 'payment_Plans.html')
+
+def payment_form(request):
+    return render(request, 'payment_form.html')
