@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 from datetime import datetime
 from Home.models import payment_form as PaymentModel
 
+
 # Create your views here.
 def index(request):
     context = {
